@@ -281,15 +281,6 @@ section {
 .hero-figure {
 	margin: 2.5em auto 0;
 }
-.hero-figure img {
-	display: block;
-	width: 100%;
-	aspect-ratio: 16 / 7;
-	object-fit: cover;
-	object-position: center 55%;
-	border-radius: 12px;
-	box-shadow: var(--shadow-hero);
-}
 
 figure {
 	margin: 0;
@@ -663,10 +654,6 @@ td.num {
 	.cards-3,
 	.figure-pair {
 		grid-template-columns: 1fr;
-	}
-
-	.hero-figure img {
-		aspect-ratio: 16 / 9;
 	}
 
 	table {
