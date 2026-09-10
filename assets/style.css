@@ -373,10 +373,6 @@ figcaption {
 	color: rgba(var(--gray-dark), 0.85);
 }
 
-.cards-3 {
-	grid-template-columns: repeat(3, 1fr);
-}
-
 /* ---------- Definition-style lists ---------- */
 
 .stack {
@@ -570,7 +566,6 @@ td.num {
 	}
 
 	.cards,
-	.cards-3,
 	.figure-pair {
 		grid-template-columns: 1fr;
 	}
