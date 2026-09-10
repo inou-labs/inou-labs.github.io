@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>技術・プロダクト — inou!</title>
+		<meta
+			name="description"
+			content="inou! PXRD は粉末X線回折分析の前処理から解析までを自動化します。粒子径のオンライン推定、ロボットによる粉末充填、測定ソフトウェアの自動化、リートベルト解析の自動化。"
+		/>
+		<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="/assets/style.css" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="技術・プロダクト — inou!" />
+		<meta property="og:url" content="https://inou-labs.github.io/technology.html" />
+		<meta property="og:image" content="https://inou-labs.github.io/assets/img/hero.jpg" />
+	</head>
+	<body>
+		<a class="skip-link" href="#main">本文へスキップ</a>
+
+		<header class="site-header">
+			<nav aria-label="メインナビゲーション">
+				<p class="brand"><a href="/">inou!</a></p>
+				<div class="nav-links">
+					<a href="/">ホーム</a>
+					<a href="/technology.html" aria-current="page">技術・プロダクト</a>
+					<a href="/about.html">プロジェクト概要</a>
+					<a href="/about.html#contact">お問い合わせ</a>
+				</div>
+			</nav>
+		</header>
+
+		<main id="main">
+			<div class="wrap-wide page-title">
+				<h1>技術・プロダクト</h1>
+				<p class="lead">
+					PXRD装置の自動化から始め、実験プロセス全体へ広げていきます。
+				</p>
+			</div>
+
+			<section>
+				<div class="wrap-wide">
+					<span class="eyebrow">前提</span>
+					<h2>粉末X線回折分析（PXRD）とは</h2>
+					<p>
+						材料の性能は結晶構造 ── 原子の配列 ── で決まります。バッテリー材料も半導体用コンデンサ材料も、同じ元素構成でありながら結晶構造の違いで性能が変わります。その結晶構造を調べる手段として不可欠なのが、粉末X線回折分析（PXRD）です。
+					</p>
+					<figure style="margin-top: 2em">
+						<img
+							src="/assets/img/xrd-to-structure.png"
+							alt="左に横軸2θ・縦軸countsのXRD回折パターン、右に対応する結晶構造の模式図"
+						/>
+						<figcaption>
+							測定で得られる回折パターン（左）から、結晶構造（右）を求めます。
+						</figcaption>
+					</figure>
+					<div class="figure-pair">
+						<figure>
+							<img
+								src="/assets/img/why-xrd-battery.jpg"
+								alt="層状の結晶構造からバッテリーセル、電気自動車の駆動用電池パックへとつながる模式図"
+							/>
+							<figcaption>バッテリー材料</figcaption>
+						</figure>
+						<figure>
+							<img
+								src="/assets/img/why-xrd-semiconductor.jpg"
+								alt="立方晶の結晶構造から積層セラミックコンデンサ、回路基板へとつながる模式図"
+							/>
+							<figcaption>半導体用コンデンサ材料</figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<section class="band">
+				<div class="wrap-wide">
+					<span class="eyebrow">プロダクト</span>
+					<h2>inou! PXRD — PXRD装置の自動化</h2>
+					<p>
+						PXRDは粉体材料R&amp;Dで最もよく使われる手法の1つでありながら、現在は全工程が熟練者に依存し、再現性と効率がボトルネックになっています。inou! PXRD は、前処理から解析・判断までをモジュール単位で自動化します。
+					</p>
+					<ol class="flow">
+						<li>
+							<h3>前処理</h3>
+							<p>粉砕・混合・洗浄</p>
+						</li>
+						<li>
+							<h3>試料調製</h3>
+							<p>秤量・充填・平滑化・試料ストレージ</p>
+						</li>
+						<li>
+							<h3>計測</h3>
+							<p>測定条件探索・PXRD装置による測定</p>
+						</li>
+						<li>
+							<h3>解析・判断</h3>
+							<p>高度解析ソフト・再計測／終了の自動判定</p>
+						</li>
+					</ol>
+					<p class="flow-loop note">
+						矢印の箇所はすべてロボット制御。モジュール間の搬送・受け渡しまで自動化しています。
+					</p>
+					<p style="margin-top: 2em">
+						PXRD装置そのものは装置メーカー製です。inou! PXRD はそれを置き換えるのではなく、周辺のハンドリングと測定ソフトウェアの操作を自動化します。測定ソフトウェアもメーカー製のものをそのまま使うため、装置側に改造を加える必要がありません。国内で広く使われている大手2社の機種について、自動化カスタマイズの実績があります。
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<div class="wrap-wide">
+					<span class="eyebrow">動作の様子</span>
+					<h2>自動実験ループの実演</h2>
+					<p>
+						粉末の充填から、試料ホルダーの搬送、PXRD装置へのセット、測定までを、人の手を介さずに実行しています。
+					</p>
+					<figure style="margin-top: 2em">
+						<div class="video">
+							<iframe
+								src="https://www.youtube-nocookie.com/embed/udCIev6Gc4U"
+								title="Autonomous robotic experimentation system for powder X-ray diffraction"
+								loading="lazy"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
+								allowfullscreen
+							></iframe>
+						</div>
+						<figcaption>
+							動作は4倍速。PXRD装置は装置メーカー製で、ロボットによる自動化と統合制御を当プロジェクトで実施しています。動画：<a
+								href="https://www.youtube.com/@onolab_osaka"
+								target="_blank"
+								rel="noopener noreferrer"
+								>大阪大学 小野研究室</a
+							>（YouTube）
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+
+			<section class="band">
+				<div class="wrap-wide">
+					<span class="eyebrow">コア技術</span>
+					<h2>4つの要素技術</h2>
+					<p>
+						全体設計・解析・ソフトウェアに強みを持つ小野研究室の研究と、ハードウェア開発・装置統合に強みを持つ研究。この2つの融合から生まれた技術です（特許出願中）。
+					</p>
+
+					<h3 style="margin-top: 2em">01. 粉砕の前処理 — 粒子径のオンライン推定</h3>
+					<p>
+						PXRD計測では十分に細かく揃った粉末が必要ですが、粉砕は「どこまで挽くか」の判断が難しく、熟練度の差がそのまま結果に出ます。粉砕中の振動から粒子径をリアルタイムに推定し、目標粒子径で自動停止します。
+					</p>
+					<figure style="margin-top: 1.5em">
+						<img
+							class="crop-plots"
+							src="/assets/img/grinding-reproducibility.png"
+							alt="ロボット粉砕と手動粉砕の粒度分布を並べたグラフ"
+						/>
+						<figcaption>
+							NaCl を n=3 で粉砕したときの粒度分布の再現性。サンプル間のばらつきに差が出ます。
+						</figcaption>
+					</figure>
+					<table>
+						<caption class="sr-only">
+							粉砕後の粒度分布の再現性（NaCl, n=3）
+						</caption>
+						<thead>
+							<tr>
+								<th scope="col">指標</th>
+								<th scope="col">ロボット</th>
+								<th scope="col">手動</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">繰り返し分布計測の相対標準偏差（D50, n=3）</th>
+								<td class="num">3.4&nbsp;%</td>
+								<td class="num">3.0&nbsp;%</td>
+							</tr>
+							<tr>
+								<th scope="row">サンプル間の相対標準偏差（D50, n=3）</th>
+								<td class="num">2.7&nbsp;%</td>
+								<td class="num">9.3&nbsp;%</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 style="margin-top: 2.5em">02. 試料調製 — ホルダーへの粉末充填</h3>
+					<p>
+						粉末をホルダーへ充填し、測定機器へセットするまでをロボットが実施します。手作業より少量の試料から高精度に測定できるため、合成できる量が限られる新規材料の評価にも向きます。
+					</p>
+					<table>
+						<caption class="sr-only">
+							ロボットと手作業の比較（アナターゼ標準試料）
+						</caption>
+						<thead>
+							<tr>
+								<th scope="col">指標</th>
+								<th scope="col">ロボット</th>
+								<th scope="col">手作業</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">必要な試料量</th>
+								<td class="num">80&nbsp;mg</td>
+								<td class="num">300&nbsp;mg</td>
+							</tr>
+							<tr>
+								<th scope="row">アナターゼ重量分率の相対標準偏差</th>
+								<td class="num">0.7&nbsp;%</td>
+								<td class="num">0.4&nbsp;%</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="note" style="margin-top: 1em">
+						出典：Yotsumoto et al., <i>Digital Discovery</i> 2024（下記文献2）。
+					</p>
+
+					<ul class="cards" style="margin-top: 2.5em">
+						<li>
+							<h3>03. ソフトウェア連携による自動計測</h3>
+							<p>
+								装置メーカーの測定ソフトウェアは多くがGUI操作を前提とし、外部から制御するAPIがありません。キーボード・マウス操作そのものを自動化することで、メーカー製ソフトをそのまま活用します。
+							</p>
+						</li>
+						<li>
+							<h3>04. 専門家レベルの自動解析</h3>
+							<p>
+								測定結果をデータベースと照合し、リートベルト解析を実行。参照データはユーザー側で追加できます。再計測するか終了するかの判断まで機械側で完結します。
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="wrap-wide">
+					<span class="eyebrow">研究業績</span>
+					<h2>査読付き論文</h2>
+					<ol class="refs">
+						<li>
+							Y. Nakajima et al., “Robotic Powder Grinding with Audio-Visual Feedback for
+							Laboratory Automation in Materials Science,” <i>2023 IEEE/RSJ International
+							Conference on Intelligent Robots and Systems (IROS)</i>, Detroit, MI, USA,
+							2023, pp. 8283–8290.
+						</li>
+						<li>
+							Y. Yotsumoto et al., “Autonomous robotic experimentation system for powder
+							X-ray diffraction,” <i>Digital Discovery</i>, 2024; 3(12): 2523–2532.
+						</li>
+					</ol>
+					<p style="margin-top: 1.5em">
+						粉体・固体は不均一性や流動特性の複雑さから自動化が難しく、液体ハンドリングの技術を横展開できないまま残されてきた領域です。粉体材料を扱う自動実験の全体設計ができる専門性が、このプロジェクトの技術的な足場です。
+					</p>
+					<p>
+						<a
+							href="https://nano-ap.eng.osaka-u.ac.jp/"
+							target="_blank"
+							rel="noopener noreferrer"
+							>大阪大学大学院工学研究科 物理学系専攻 応用物理学コース
+							先端物性工学領域（小野研究室）</a
+						>
+					</p>
+				</div>
+			</section>
+
+			<section class="band">
+				<div class="wrap-wide">
+					<span class="eyebrow">構想</span>
+					<h2>inou! OS — 自動実験アプリを横断管理する共通基盤</h2>
+					<p>
+						PXRD は最初のアプリケーションです。実験工程をモジュールとして切り出し、共通の実行基盤に載せることで、他の測定手法にも同じ仕組みを展開できます。
+					</p>
+					<ul class="layers">
+						<li>
+							<span class="layer-label">LAYER 1</span>
+							<h3>アプリケーション</h3>
+							<ul class="chips">
+								<li>inou! PXRD<span class="status status-done">開発済</span></li>
+								<li>inou! Adhesion<span class="status status-wip">開発中</span></li>
+								<li>inou! XRF ほか<span class="status status-next">今後</span></li>
+							</ul>
+						</li>
+						<li>
+							<span class="layer-label">LAYER 2</span>
+							<h3>共通実行基盤</h3>
+							<ul class="chips plain">
+								<li>遠隔制御</li>
+								<li>スケジューリング</li>
+								<li>監視制御</li>
+								<li>ログ</li>
+								<li>データ管理</li>
+								<li>外部ソフトとのAPI連携</li>
+							</ul>
+						</li>
+						<li>
+							<span class="layer-label">LAYER 3</span>
+							<h3>モジュール群</h3>
+							<ul class="chips plain">
+								<li>前処理</li>
+								<li>試料調製</li>
+								<li>計測</li>
+								<li>解析</li>
+							</ul>
+						</li>
+						<li>
+							<span class="layer-label">LAYER 4</span>
+							<h3>装置・ロボット</h3>
+							<p class="note" style="margin: 0">
+								装置メーカー製の測定装置と、モジュール間の搬送を担うロボット。
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="cta">
+				<div class="wrap-wide">
+					<h2>導入のご相談</h2>
+					<p>共同研究、実証実験、技術に関するご相談を承っています。</p>
+					<p><a class="button" href="/about.html#contact">お問い合わせはこちら</a></p>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<nav aria-label="フッターナビゲーション">
+				<a href="/">ホーム</a>
+				<a href="/technology.html">技術・プロダクト</a>
+				<a href="/about.html">プロジェクト概要</a>
+				<a href="/about.html#contact">お問い合わせ</a>
+			</nav>
+			<p>inou! project — 大阪大学 小野研究室</p>
+			<p>&copy; 2026 inou! project</p>
+		</footer>
+	</body>
+</html>

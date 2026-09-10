@@ -9,16 +9,17 @@ inou! プロジェクトの公式サイト。<https://inou-labs.github.io/>
 ```
 /
 ├── index.html          トップ
-├── about.html          プロジェクト概要・体制
-├── products.html       inou! PXRD ／ inou! OS 構想
-├── research.html       コア技術・研究業績・研究室への動線
-├── contact.html        お問い合わせ
+├── technology.html     プロダクト ＋ コア技術 ＋ 研究業績 ＋ inou! OS 構想
+├── about.html          プロジェクト概要 ＋ 体制 ＋ お問い合わせ (#contact)
 ├── assets/
 │   ├── style.css       全ページ共通のスタイルシート
 │   ├── favicon.svg
 │   └── img/            図版・写真
 └── .nojekyll
 ```
+
+お問い合わせは `about.html` 内の `#contact` セクション。
+ナビの「お問い合わせ」は `/about.html#contact` を指しています。
 
 ## ローカルで確認する
 
@@ -39,8 +40,8 @@ python3 -m http.server 8080
 
 ### ヘッダーとフッターは各ページにベタ書き
 
-インクルード機構がないため、ナビゲーションは5ページすべてに複製されています。
-リンクを追加・変更するときは **5ファイルすべて**を直してください。
+インクルード機構がないため、ナビゲーションは3ページすべてに複製されています。
+リンクを追加・変更するときは **3ファイルすべて**を直してください。
 
 ページごとの差分は、現在のページを示す `aria-current="page"` の位置だけです。
 
@@ -82,7 +83,7 @@ grep -riE '080-|候補|億円|万円|従量課金' *.html
 
 ## 動画
 
-`products.html` の実演動画は、小野研究室の YouTube チャンネルから埋め込んでいます。
+`technology.html` とトップの実演動画は、小野研究室の YouTube チャンネルから埋め込んでいます。
 動画ファイルはリポジトリに置いていません（元ファイルは 4.8MB あり、サイト全体より重い）。
 
 | 項目 | 値 |
@@ -91,7 +92,7 @@ grep -riE '080-|候補|億円|万円|従量課金' *.html
 | チャンネル | [Osaka Univ. Ono Lab](https://www.youtube.com/@onolab_osaka) |
 | 埋め込み元 | `youtube-nocookie.com`（`loading="lazy"`） |
 
-差し替えるときは `products.html` の `iframe` の `src` と `title` を直します。
+差し替えるときは `index.html` と `technology.html` の `iframe` の `src` と `title` を直します。
 動画が非公開になると埋め込みが空になるため、公開範囲の変更時は要確認。
 
 ## 外部リンク
@@ -101,9 +102,9 @@ URL が変わったときは以下をまとめて直してください。
 
 | リンク先 | 使用ページ |
 | --- | --- |
-| `https://nano-ap.eng.osaka-u.ac.jp/` | `contact.html` / `research.html` |
-| `https://nano-ap.eng.osaka-u.ac.jp/member/` | `contact.html` / `about.html` |
-| `https://nano-ap.eng.osaka-u.ac.jp/access/` | `contact.html` |
+| `https://nano-ap.eng.osaka-u.ac.jp/` | `about.html` / `technology.html` |
+| `https://nano-ap.eng.osaka-u.ac.jp/member/` | `about.html` |
+| `https://nano-ap.eng.osaka-u.ac.jp/access/` | `about.html` |
 
 外部リンクには `target="_blank"` と `rel="noopener noreferrer"` を必ず付けます。
 
