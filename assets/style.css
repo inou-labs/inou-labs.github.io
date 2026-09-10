@@ -694,3 +694,11 @@ td.num {
 	object-position: top center;
 	background: #fff;
 }
+
+/* ---------- Contact ---------- */
+
+.contact-mail {
+	font-size: 1.15em;
+	font-weight: 700;
+	margin-bottom: 0.3em;
+}

@@ -80,10 +80,21 @@ grep -riE '080-|候補|億円|万円|従量課金' *.html
 共同開発や推奨と誤読されないよう、キャプションで「PXRD装置は装置メーカー製」である旨を
 必ず明記してください。
 
+## 外部リンク
+
+小野研究室の公式サイトへは3ページからリンクしています。
+URL が変わったときは以下をまとめて直してください。
+
+| リンク先 | 使用ページ |
+| --- | --- |
+| `https://nano-ap.eng.osaka-u.ac.jp/` | `contact.html` / `research.html` |
+| `https://nano-ap.eng.osaka-u.ac.jp/member/` | `contact.html` / `about.html` |
+| `https://nano-ap.eng.osaka-u.ac.jp/access/` | `contact.html` |
+
+外部リンクには `target="_blank"` と `rel="noopener noreferrer"` を必ず付けます。
+
 ## 未確定事項
 
-- [ ] 公開用のお問い合わせ先メールアドレス（`contact.html` にプレースホルダあり）
-- [ ] 大阪大学 小野研究室の公式サイト URL（決まり次第 `research.html` からリンク）
 - [ ] `inou!` の正式ロゴ（現在は CSS のロゴタイプ、favicon は暫定）
 - [ ] 独自ドメイン（`CNAME` 1行 + DNS 設定で後から移行可能）
 - [ ] プロダクト動画（資料の `media1.mp4` を 720p 程度に再エンコードして掲載可）
