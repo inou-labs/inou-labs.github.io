@@ -10,7 +10,8 @@ inou! プロジェクトの公式サイト。<https://inou-labs.github.io/>
 /
 ├── index.html          トップ
 ├── technology.html     プロダクト ＋ コア技術 ＋ 研究業績
-├── about.html          プロジェクト概要 ＋ 体制 ＋ お問い合わせ (#contact)
+├── about.html          プロジェクト概要 ＋ 体制
+├── contact.html        お問い合わせ ＋ 所在地・アクセス
 ├── assets/
 │   ├── style.css       全ページ共通のスタイルシート
 │   ├── favicon.svg
@@ -18,8 +19,6 @@ inou! プロジェクトの公式サイト。<https://inou-labs.github.io/>
 └── .nojekyll
 ```
 
-お問い合わせは `about.html` 内の `#contact` セクション。
-ナビの「お問い合わせ」は `/about.html#contact` を指しています。
 
 ## ローカルで確認する
 
@@ -40,8 +39,8 @@ python3 -m http.server 8080
 
 ### ヘッダーとフッターは各ページにベタ書き
 
-インクルード機構がないため、ナビゲーションは3ページすべてに複製されています。
-リンクを追加・変更するときは **3ファイルすべて**を直してください。
+インクルード機構がないため、ナビゲーションは4ページすべてに複製されています。
+リンクを追加・変更するときは **4ファイルすべて**を直してください。
 
 ページごとの差分は、現在のページを示す `aria-current="page"` の位置だけです。
 
@@ -102,9 +101,9 @@ URL が変わったときは以下をまとめて直してください。
 
 | リンク先 | 使用ページ |
 | --- | --- |
-| `https://nano-ap.eng.osaka-u.ac.jp/` | `about.html` / `technology.html` |
+| `https://nano-ap.eng.osaka-u.ac.jp/` | `contact.html` / `technology.html` |
 | `https://nano-ap.eng.osaka-u.ac.jp/member/` | `about.html` |
-| `https://nano-ap.eng.osaka-u.ac.jp/access/` | `about.html` |
+| `https://nano-ap.eng.osaka-u.ac.jp/access/` | `contact.html` |
 
 外部リンクには `target="_blank"` と `rel="noopener noreferrer"` を必ず付けます。
 
