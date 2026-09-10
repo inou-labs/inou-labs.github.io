@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>inou! — 材料開発のための自動実験システム</title>
+		<meta
+			name="description"
+			content="実験プロセス中の材料内部状態を観測・推定・制御する自動実験システム。粉末X線回折分析（PXRD）の前処理から解析・判断までを一気通貫で自動化します。"
+		/>
+		<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="/assets/style.css" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="inou! — 材料開発のための自動実験システム" />
+		<meta
+			property="og:description"
+			content="実験プロセス中の材料内部状態を観測・推定・制御する自動実験システム。"
+		/>
+		<meta property="og:url" content="https://inou-labs.github.io/" />
+		<meta property="og:image" content="https://inou-labs.github.io/assets/img/hero.jpg" />
+	</head>
+	<body>
+		<a class="skip-link" href="#main">本文へスキップ</a>
+
+		<header class="site-header">
+			<nav aria-label="メインナビゲーション">
+				<p class="brand"><a href="/">inou!</a></p>
+				<div class="nav-links">
+					<a href="/" aria-current="page">ホーム</a>
+					<a href="/products.html">プロダクト</a>
+					<a href="/research.html">技術と研究</a>
+					<a href="/about.html">プロジェクト概要</a>
+					<a href="/contact.html">お問い合わせ</a>
+				</div>
+			</nav>
+		</header>
+
+		<main id="main">
+			<section class="hero">
+				<div class="wrap-wide">
+					<p class="logotype">inou!</p>
+					<h1>実験プロセス中の材料内部状態を<br />観測・推定・制御する自動実験システム</h1>
+					<p class="lead">
+						手軽で高品質な自動実験＆測定環境を、材料開発の現場に届ける。
+					</p>
+				</div>
+				<div class="wrap-wide hero-figure">
+					<figure>
+						<img
+							src="/assets/img/hero.jpg"
+							width="1600"
+							height="900"
+							alt="ロボットアームと粉末X線回折装置を組み合わせた自動実験システムの外観"
+						/>
+						<figcaption>
+							粉末X線回折（PXRD）装置は装置メーカー製。ロボットによる自動化と統合制御を当プロジェクトで実施しています。
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+
+			<section>
+				<div class="wrap-wide">
+					<span class="eyebrow">課題</span>
+					<h2>貴重なR&amp;D資源が、手作業に費やされている</h2>
+					<p>
+						粉末X線回折分析（PXRD）は、粉体材料のR&amp;Dで最もよく使われる測定・解析手法の1つです。材料の性能は結晶構造で決まり、その結晶構造を調べるにはPXRDが欠かせません。
+					</p>
+					<p>
+						にもかかわらず、前処理から解析に至る多くの工程が、いまだ手作業に依存しています。勘・コツ・経験の有無による熟練度の差が計測・解析結果に影響し、そのままデータ品質の差になります。同一の研究員でも再現性は乏しく、手戻りややり直しが生じます。
+					</p>
+					<p>
+						熟練技術者の引退が進むなかで暗黙知の継承は危うくなり、一方でAI-readyな材料開発に向けて、再現性が高く質の良い実験データ基盤への要求は強まっています。
+					</p>
+				</div>
+			</section>
+
+			<section class="band">
+				<div class="wrap-wide">
+					<span class="eyebrow">アプローチ</span>
+					<h2>工程全体を、一気通貫の自動ループに</h2>
+					<p>
+						前処理から解析・判断まで、実験工程のすべてをモジュール単位で自動化します。モジュール間の搬送・受け渡しまでロボットが制御するため、工程が途中で人の手に戻りません。
+					</p>
+					<ol class="flow">
+						<li>
+							<h3>前処理</h3>
+							<p>粉砕・混合・洗浄。粒子径を監視し、目標に達したら自動で停止。</p>
+						</li>
+						<li>
+							<h3>試料調製</h3>
+							<p>秤量・充填・平滑化。ホルダーへの粉末充填をロボットが実施。</p>
+						</li>
+						<li>
+							<h3>計測</h3>
+							<p>測定条件の探索と、装置メーカー製PXRD装置による測定。</p>
+						</li>
+						<li>
+							<h3>解析・判断</h3>
+							<p>リートベルト解析と、再計測するか終了するかの自動判定。</p>
+						</li>
+					</ol>
+					<p class="flow-loop note">
+						解析結果から再計測を自動判定し、前処理へ戻します。24時間の連続運転が可能です。
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<div class="wrap-wide">
+					<span class="eyebrow">コア技術</span>
+					<h2>4つの要素技術</h2>
+					<p>
+						全体設計・解析・ソフトウェアと、ハードウェア開発・装置統合。異なる強みを持つ2つの研究の融合から生まれた技術です（特許出願中）。
+					</p>
+					<ul class="cards">
+						<li>
+							<h3>高い再現性での試料調製</h3>
+							<p>
+								粉砕中の振動から粒子径をリアルタイムに推定し、目標粒子径で自動停止。手作業より高い再現性で実験できます。
+							</p>
+						</li>
+						<li>
+							<h3>ロボットによる粉末充填</h3>
+							<p>
+								充填から測定機器へのセットまでロボットが実施。手作業より少量の試料から高精度に測定できます。
+							</p>
+						</li>
+						<li>
+							<h3>ソフトウェア連携による自動計測</h3>
+							<p>
+								装置メーカーのGUIソフトウェアをそのまま活用し、キーボード・マウス操作を自動化します。
+							</p>
+						</li>
+						<li>
+							<h3>専門家レベルの自動解析</h3>
+							<p>
+								測定結果をデータベースと照合し、リートベルト解析を実行。大量の測定データを高速に処理します。
+							</p>
+						</li>
+					</ul>
+					<p style="margin-top: 1.5em">
+						<a href="/research.html">技術の詳細と、根拠となる研究業績を見る →</a>
+					</p>
+				</div>
+			</section>
+
+			<section class="band">
+				<div class="wrap-wide">
+					<span class="eyebrow">研究背景</span>
+					<h2>大阪大学 小野研究室の研究成果が土台</h2>
+					<p>
+						このシステムは、大阪大学 小野研究室で進められてきた、材料計測とデータ解析の研究を土台としています。粉体・固体のハンドリングは不均一性や流動特性の複雑さから自動化が難しく、ライフサイエンス分野で普及した液体ハンドリングの技術をそのまま横展開できませんでした。
+					</p>
+					<p>
+						粉体材料を扱う自動実験の全体設計ができる専門性が、このプロジェクトの強みです。研究成果は国際会議および査読誌で公表しています。
+					</p>
+					<p>
+						<a href="/research.html">研究業績と技術シーズを見る →</a>
+					</p>
+				</div>
+			</section>
+
+			<section class="cta">
+				<div class="wrap-wide">
+					<h2>お問い合わせ</h2>
+					<p>共同研究、実証実験、技術に関するご相談を承っています。</p>
+					<p><a class="button" href="/contact.html">お問い合わせはこちら</a></p>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<nav aria-label="フッターナビゲーション">
+				<a href="/">ホーム</a>
+				<a href="/products.html">プロダクト</a>
+				<a href="/research.html">技術と研究</a>
+				<a href="/about.html">プロジェクト概要</a>
+				<a href="/contact.html">お問い合わせ</a>
+			</nav>
+			<p>inou! project — 大阪大学 小野研究室</p>
+			<p>&copy; 2026 inou! project</p>
+		</footer>
+	</body>
+</html>
