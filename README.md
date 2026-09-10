@@ -9,7 +9,7 @@ inou! プロジェクトの公式サイト。<https://inou-labs.github.io/>
 ```
 /
 ├── index.html          トップ
-├── technology.html     プロダクト ＋ コア技術 ＋ 研究業績 ＋ inou! OS 構想
+├── technology.html     プロダクト ＋ コア技術 ＋ 研究業績
 ├── about.html          プロジェクト概要 ＋ 体制 ＋ お問い合わせ (#contact)
 ├── assets/
 │   ├── style.css       全ページ共通のスタイルシート
