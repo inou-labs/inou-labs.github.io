@@ -395,6 +395,31 @@ figcaption {
 	margin-bottom: 0;
 }
 
+.stack.team > article {
+	display: flex;
+	gap: 1.3em;
+	align-items: flex-start;
+}
+
+.stack.team img {
+	flex-shrink: 0;
+	width: 8em;
+	height: 10.4em;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 4px;
+}
+
+.stack.team > article p {
+	max-width: var(--measure);
+}
+
+@media (max-width: 480px) {
+	.stack.team > article {
+		flex-direction: column;
+	}
+}
+
 .figure-pair {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
